@@ -64,7 +64,7 @@ namespace C0730108_C0722414
             if (amount < 0)
             {
                 throw new ArgumentOutOfRangeException("amount");
-            }
+            }  
             m_balance += amount;
         }
                 private void FreezeAccount()
