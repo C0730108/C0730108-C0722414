@@ -26,7 +26,7 @@ namespace C0730108_C0722414
         }
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Debit_WhenAmountIsLessThenZero_ShouldThrowArgumentOutOfRange()
+        public void Debit_WhenAmountIsLessThenZero_ShouldThrowArgumentOutOfRange()  
         {
             //Arrange
             double begninningBalance = 11.99;
