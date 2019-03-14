@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C0730108_C0722414
 {
-    class Program
+    class Bank
     {
 
     }
