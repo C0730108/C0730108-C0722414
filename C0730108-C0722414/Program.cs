@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace C0730108_C0722414
 {
-    class Bank
-    {
-
-    }
+    
         
             public class BankAccount
         {
-            private string m_customerName;
+
+        public const string DebitAmountExceedsBalanceMessage = "Debit amount exceeds balance";
+        public const string DebitAmountLessThanZeroMessage = "Debit amount exceeds balance";
+        private string m_customerName;
 
             private double m_balance;
             private bool m_frozon = false;
@@ -46,13 +46,13 @@ namespace C0730108_C0722414
                 }
                 if (amount > m_balance)
                 {
-                    throw new ArgumentOutOfRangeException("amount");
+                    throw new ArgumentOutOfRangeException("amount",amount,DebitAmountExceedsBalanceMessage);
                 }
                 if (amount < 0)
                 {
-                    throw new ArgumentOutOfRangeException("amount");
+                    throw new ArgumentOutOfRangeException("amount", amount,DebitAmountLessThanZeroMessage);
                 }
-                m_balance += amount;
+                m_balance -= amount;
             }
         public void Credit(double amount)
         {
